@@ -1,17 +1,162 @@
 @font-face {
     font-family: "OpenSans";
-    src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+    src: url("../fonts/OpenSans-Bold.ttf"),
+    url("../fonts/OpenSans-Bold.woff"),
+    url("../fonts/OpenSans-Bold.woff2");
     font-weight: 400;
     font-style: normal;
   }
   
   @font-face {
     font-family: "OpenSans";
-    src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+    src: url("../fonts/OpenSans-Regular.ttf"),
+    url("../fonts/OpenSans-Regular.woff"),
+    url("../fonts/OpenSans-Regular.woff2");
     font-weight: 700;
     font-style: normal;
   }
-  
+
+  .block-popup::before {
+    content: "";
+    position: fixed; 
+    background-color: #000000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.7;
+    z-index: 9999;
+    display: none;
+  }
+
+  .popup {
+    width: 390px;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 9999;
+    padding-left: 50px;
+    display: none;
+  }
+
+  .popup-title {
+    position: relative;
+    font-family: "OpenSans";
+    font-size: 20px;
+    font-weight: 400;
+    color: #0f0d0e;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 63px;
+    padding-bottom: 14px;
+  }
+
+  .popup-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 66px;
+    height: 3px;
+    background-color: #e1d9bd;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .form-hint {
+    font-family: "OpenSans";
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .select {
+    display: block;
+    box-sizing: border-box;
+    width: 329px;
+    height: 47px;
+    background-color: #f3f7f6;
+    border: none;
+    font-family: "OpenSans";
+    color: #7d7f7e;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    padding-left: 18px;
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 32px;
+  }
+
+  .select:hover {
+    cursor: pointer;
+  }
+
+  .select:focus {
+    outline: none;
+  }
+
+  .form-arrows {
+    position: absolute;
+    right: 74px;
+    top: 165px;
+    width: 10px;
+    height: 17px;
+  }
+
+  .form-arrows:hover {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+
+  .form-row-answer {
+    margin-bottom: 36px;
+  }
+
+  .radio-group-text {
+    font-family: "OpenSans";
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  } 
+
+  .radio-circle {
+    width: 17px;
+    height: 17px;
+  }
+
+  .radio-circle-empty {
+    width: 17px;
+    height: 17px;
+  }
+
+  .field {
+    font-size: 14px;
+    font-weight: 900;
+    font-family: "OpenSans";
+    padding-top: 20px;
+    padding-left: 18px;
+    max-width: 329px;
+  }
+
+  .button-send {
+    width: 329px;
+    border: none;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background-color: #b69f5b;
+    margin-top: 26px;
+    margin-bottom: 54px;
+    color: #fffeef;
+    font-family: "OpenSans";
+    text-transform: uppercase;
+  }
+
   header {
     position: relative;
     background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
@@ -174,10 +319,6 @@
     text-decoration: underline;
   }
 
-  .trend-title {
-    margin: 0;
-  }
-
   .trend-title-link {
     font-family: "OpenSans";
     text-decoration: none;
@@ -274,7 +415,7 @@
     text-align: left;
   }
   
-  .sidebar {
+  aside {
     width: 22%;
     margin-top: 40px;
   }
@@ -554,23 +695,20 @@
     display: block;
   }
 
-  .container {
+  .products {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
   }
 
   .product-img {
     width: 298px;
-    position: relative; 
-  
   }
 
   .product-shop {
     border: 3px solid #d3c59d;
     width: 340px;
     padding: 53px 21px 66px;
-    position: absolute;
-    top: 170px; 
   }
 
   .shop-title {
@@ -578,7 +716,6 @@
     font-family: "OpenSans";
     text-transform: uppercase;
     color: #0f0d0e;
-    margin: 0;
   }
 
   .shop-text {
@@ -586,6 +723,8 @@
     font-family: "OpenSans";
     color: #0f0d0e;
     line-height: 22px;
+    display: flex;
+    flex-grow: 1; 
   }
 
   .shop-link {
@@ -666,7 +805,7 @@
     width: 140px;
     background-color: #b59f5b;
     border: none;
-    font-size: 14px;
+    font-size: 12px;
     font-family: "OpenSans";
     text-transform: uppercase;
     color: #ffffff;
@@ -682,7 +821,6 @@
   footer, .news {
     display: flex;
     flex-direction: column;
-    margin-top: 280px;
   }
   
   .socials {
