@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
     font-family: "OpenSans";
     src: url("../fonts/OpenSans-Bold.ttf"),
@@ -16,28 +21,33 @@
     font-style: normal;
   }
 
-  .block-popup::before {
-    content: "";
-    position: fixed; 
-    background-color: #000000;
+  body {
+    margin: 0;
+  }
+  
+  .block-popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     display: none;
   }
 
   .popup {
     width: 390px;
     background-color: #ffffff;
-    position: fixed;
-    z-index: 9999;
-    padding-left: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
     display: none;
   }
-
+  
   .popup-title {
     position: relative;
     font-family: "OpenSans";
@@ -45,11 +55,11 @@
     font-weight: 400;
     color: #0f0d0e;
     text-transform: uppercase;
-    text-align: center;
+    text-align: center; 
     margin-top: 63px;
     padding-bottom: 14px;
   }
-
+  
   .popup-title::after {
     content: "";
     position: absolute;
@@ -63,6 +73,10 @@
     display: block;
   }
 
+  .form-row {
+    margin-top: 28px;
+  }
+  
   .form-hint {
     font-family: "OpenSans";
     font-size: 14px;
@@ -70,7 +84,7 @@
     display: block;
     margin-bottom: 10px;
   }
-
+  
   .select {
     display: block;
     box-sizing: border-box;
@@ -88,53 +102,53 @@
     font-weight: 900;
     margin-bottom: 32px;
   }
-
+  
   .select:hover {
     cursor: pointer;
   }
-
+  
   .select:focus {
     outline: none;
   }
-
+  
   .form-arrows {
     position: absolute;
-    right: 74px;
-    top: 165px;
+    right: 605px;
+    top: 255px;
     width: 10px;
-    height: 17px;
+    height: 17px; 
   }
-
+  
   .form-arrows:hover {
     opacity: 0.3;
     cursor: pointer;
   }
-
+  
   .form-row-answer {
     margin-bottom: 36px;
   }
-
+  
   .radio-group-text {
     font-family: "OpenSans";
     font-weight: 700;
     font-size: 14px;
   }
-
+  
   .radio {
     -webkit-appearance: none;
     -moz-appearance: none;
   } 
-
+  
   .radio-circle {
     width: 17px;
     height: 17px;
   }
-
+  
   .radio-circle-empty {
     width: 17px;
     height: 17px;
   }
-
+  
   .field {
     font-size: 14px;
     font-weight: 900;
@@ -142,8 +156,9 @@
     padding-top: 20px;
     padding-left: 18px;
     max-width: 329px;
+    max-height: 130px;
   }
-
+  
   .button-send {
     width: 329px;
     border: none;
@@ -155,6 +170,13 @@
     color: #fffeef;
     font-family: "OpenSans";
     text-transform: uppercase;
+  } 
+  
+  .content {
+    width: 1170px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto; 
   }
 
   header {
@@ -258,6 +280,7 @@
     display: flex;
     justify-content: space-between;
     vertical-align: bottom;
+    margin-top: 30px;
   }
 
   .trend-article {
@@ -272,16 +295,22 @@
     align-items: flex-end;
   }
 
+  .trend-article:nth-child(1) {
+    margin-right: 4px;
+  } 
+
   .trend-article:nth-child(2) {
     background-image: url("../images/trend2.jpg");
+    margin-right: 4px;
   }
 
   .trend-article:nth-child(3) {
-    background-image: url("../images/trend3.jpg");
+    background-image: url("../images/trend3.jpg")
   }
 
   .trend-article:nth-child(4) {
     background-image: url("../images/trend4.jpg");
+    margin-left: 4px;
   }
 
   .trend-article::after {
@@ -382,6 +411,7 @@
     text-transform: uppercase;
     line-height: 24px;
     font-size: 20px;
+    font-weight: 500;
   }
   
   .news-title-link:hover {
@@ -416,7 +446,7 @@
   }
   
   aside {
-    width: 22%;
+    width: 272px;
     margin-top: 40px;
   }
   
@@ -426,8 +456,10 @@
     color: #0f0d0e;
     text-transform: uppercase;
     font-size: 14px;
+    font-weight: 500;
     text-align: center;
     padding-bottom: 14px;
+    padding-top: 20px;
   }
   
   .caption::after {
@@ -445,7 +477,8 @@
   
   .post-article {
     display: flex;
-    padding-bottom: 21px; 
+    padding-bottom: 21px;
+    margin-top: 28px; 
   }
   
   .post-img {
@@ -465,6 +498,7 @@
     line-height: 18px;
     font-size: 14px;
     color: #000000;
+    font-weight: 500;
   }
   
   .post-title-link:hover {
@@ -490,6 +524,7 @@
     border: solid 2px #ffffff;
     padding-left: 19px;
     font-size: 13px;
+    font-weight: 900;
   }
   
   .search-field:focus {
@@ -510,7 +545,7 @@
   
   .button-search {
     position: absolute;
-    right: 35px;
+    right: 1px;
     border: none;
     padding: 15px;
     background-color: #b59f5b;
@@ -540,6 +575,7 @@
   
   form {
     margin-top: 23px;
+    margin-bottom: 58px;
   }
   
   .field {
@@ -552,6 +588,7 @@
     padding-left: 19px;
     font-size: 13px;
     border: solid 2px #ffffff;
+    padding-bottom: 18px;
   }
   
   .field:hover {
@@ -640,12 +677,12 @@
     display: inline-block;
     padding-top: 12px;
     padding-bottom: 12px;
-    font-weight: 600;
+    font-weight: 500;
   }
   
   .link-topic:hover {
     color: #000000;
-    font-weight: 600;
+    font-weight: 500;
   }
   
   .link-topic:focus {
@@ -662,7 +699,6 @@
   .container-socials {
     display: flex;
     justify-content: center;
-    width: 76%;
     background-color: #f4f7f6;
     margin-right: auto;
     margin-left: auto;
@@ -674,7 +710,7 @@
     position: relative;
     font-family: "OpenSans";
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 500;
     color: #0f0d0e;
     text-transform: uppercase;
     text-align: center;
@@ -696,19 +732,28 @@
   }
 
   .products {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    margin-top: 30px;
   }
 
-  .product-img {
+  .product-preview {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .products-img {
     width: 298px;
+  }
+
+  .product-description {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -35px;
   }
 
   .product-shop {
     border: 3px solid #d3c59d;
-    width: 340px;
-    padding: 53px 21px 66px;
+    width: 300px;
+    padding: 30px 21px 27px;
   }
 
   .shop-title {
@@ -716,10 +761,12 @@
     font-family: "OpenSans";
     text-transform: uppercase;
     color: #0f0d0e;
+    font-weight: 500;
   }
 
   .shop-text {
     font-size: 15px;
+    font-weight: 400;
     font-family: "OpenSans";
     color: #0f0d0e;
     line-height: 22px;
@@ -736,6 +783,10 @@
 
   .shop-link:hover {
     text-decoration: underline;
+  }
+
+  .price {
+    margin-top: 30px;
   }
 
   .shop-price {
@@ -775,7 +826,7 @@
   .shop-discount {
     font-family: "OpenSans";
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 400;
     position: relative;
     text-transform: uppercase;
   }
@@ -796,7 +847,7 @@
     display: block;
   }
 
-  .prise-wrap {
+  .price-wrap {
     display: flex;
     justify-content: space-between;
   }
@@ -810,6 +861,7 @@
     text-transform: uppercase;
     color: #ffffff;
     padding: 18px 29px;
+    margin-top: 30px;
   }
 
   .shop-button:focus {
