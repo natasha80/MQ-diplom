@@ -10,6 +10,7 @@
 
 <body>
   <div class="block-popup">
+    <span class="close"></span>
     <div class="popup">
       <h2 class="popup-title">Ваш фидбек</h2>
       <div class="form-row">
@@ -38,7 +39,8 @@
       </div>
       <div class="form-row">
         <span class="form-hint">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
-        <textarea class="field" placeholder="Может, больше рецептов?"></textarea>
+        <input class="field-text" placeholder="Может, больше рецептов?"></input>
+
       </div>
       <button class="button-send" type="submit">Отправить</button>
     </div>
@@ -86,10 +88,12 @@
           <a class="trend-subtitle" href="#0">Lifestyle</a>
           <a class="trend-subtitle" href="#0">Interior</a>
           <h3 class="trend-title">
-            <a class="trend-title-link" href="#0">Сейчас в тренде: сад на подоконнике</a>
+            <a class="trend-title-link" href="#0">Сейчас в тренде: сад на
+              подоконнике</a>
           </h3>
         </div>
       </article>
+
       <article class="trend-article">
         <div class="trend-info">
           <a class="trend-subtitle" href="#0">Food</a>
@@ -390,66 +394,75 @@
       <h2 class="subtitle">Наши изделия</h2>
       <div class="container">
         <div class="products">
-          <div class="product-preview">
-            <div class="product-img">
-              <img src="images/shop-item-desk1.jpg" alt="product-image">
-            </div>
-            <div class="product-img">
-              <img src="images/shop-item-desk2.jpg" alt="product-image">
-            </div>
-            <div class="product-img">
-              <img src="images/shop-item-desk3.jpg" alt="product-image">
-            </div>
-          </div>
-
-          <div class="product-description">
-            <div class="product-shop">
-              <h3 class="shop-title">Подушки на диван</h3>
-              <div class="shop-text">
-                <p>Набор из двух подушек с модными принтами. Видео о создании <a href="#0" class="shop-link">здесь</a>.
-                </p>
+          <article>
+            <div class="product-description">
+              <div class="product-img">
+                <img src="images/shop-item-desk1.jpg" alt="product-image">
               </div>
-              <div class="price-wrap">
-                <div class="price">
-                  <div class="shop-price">1000<span class="ruble-price">р</span></div>
-                  <div class="shop-discount">800<span class="ruble-discount">р</span></div>
+              <div class="product-shop">
+                <h3 class="shop-title">Подушки на диван</h3>
+                <div class="shop-text">
+                  <p>Набор из двух подушек с модными принтами. Видео о создании <a href="#0"
+                      class="shop-link">здесь</a>.
+                  </p>
                 </div>
-                <button class="shop-button">В магазин</button>
-              </div>
-            </div>
-
-            <div class="product-shop">
-              <h3 class="shop-title">Кукла «Зайчик»</h3>
-              <div class="shop-text">
-                <p>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0"
-                    class="shop-link">весенняя
-                    серия постов</a>в блоге и несколько подкастов.
-                </p>
-              </div>
-              <div class="price-wrap">
-                <div class="price">
-                  <div class="shop-discount">3500<span class="ruble-discount">р</span></div>
+                <div class="price-wrap">
+                  <div class="price">
+                    <div class="shop-price">1000<span class="ruble-price">р</span></div>
+                    <div class="shop-discount">800<span class="ruble-discount">р</span></div>
+                  </div>
+                  <button class="shop-button">В магазин</button>
                 </div>
-                <button class="shop-button">В магазин</button>
               </div>
             </div>
+          </article>
 
-            <div class="product-shop">
-              <h3 class="shop-title">Шестиугольная рамка</h3>
-              <div class="shop-text">
-                <p>Необычная рамка для украшения дома из видео<a href="#0" class="shop-link">«Как сделать рамку
-                    из подручных средств за 30 минут»</a>.
-                </p>
+          <article>
+            <div class="product-description">
+              <div class="product-img">
+                <img src="images/shop-item-desk2.jpg" alt="product-image">
               </div>
-              <div class="price-wrap">
-                <div class="price">
-                  <div class="shop-price">500<span class="ruble-price">р</span></div>
-                  <div class="shop-discount">400<span class="ruble-discount">р</span></div>
+              <div class="product-shop">
+                <h3 class="shop-title">Кукла «Зайчик»</h3>
+                <div class="shop-text">
+                  <p>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0"
+                      class="shop-link">весенняя
+                      серия постов</a>в блоге и несколько подкастов.
+                  </p>
                 </div>
-                <button class="shop-button">В магазин</button>
+                <div class="price-wrap">
+                  <div class="price">
+                    <div class="shop-discount">3500<span class="ruble-discount">р</span></div>
+                  </div>
+                  <button class="shop-button">В магазин</button>
+                </div>
               </div>
             </div>
-          </div>
+          </article>
+
+          <article>
+            <div class="product-description">
+              <div class="product-img">
+                <img src="images/shop-item-desk3.jpg" alt="product-image">
+              </div>
+              <div class="product-shop">
+                <h3 class="shop-title">Шестиугольная рамка</h3>
+                <div class="shop-text">
+                  <p>Необычная рамка для украшения дома из видео<a href="#0" class="shop-link">«Как сделать рамку
+                      из подручных средств за 30 минут»</a>.
+                  </p>
+                </div>
+                <div class="price-wrap">
+                  <div class="price">
+                    <div class="shop-price">500<span class="ruble-price">р</span></div>
+                    <div class="shop-discount">400<span class="ruble-discount">р</span></div>
+                  </div>
+                  <button class="shop-button">В магазин</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </div>
